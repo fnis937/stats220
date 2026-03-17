@@ -14,7 +14,7 @@
 ### Here is a little more information about me
 
 
-`Now, you *may* be wondering: What are my **favourite websites**?`
+Now, you *may* be wondering: What are my **favourite websites**?
 
 * This is a website called Little Alchemy. As a someone who did the traditional sciences in highschool, I loved going on this website and trying to create different elements when I was bored: [Little Alchemy](https://littlealchemy.com)
 * As someone who is a devoted (and slightly anxious) cat mum to 3 little furry friends, I enjoy finding ways to over-analyse my cat's behaviours, and this website has a collection unique articles that allow me to do just that. [cats.com](https://cats.com)
