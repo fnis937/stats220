@@ -11,7 +11,7 @@
     <li> am interested in learning about learning how to program in R for data analysis and visualisation, as well as learning to develop creativity with data and technology.</li>
     </ol>
 
-# Here is a little more information about me
+### Here is a little more information about me
 
 
 `Now, you *may* be wondering: What are my **favourite websites**?`
