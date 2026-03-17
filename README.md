@@ -22,6 +22,6 @@ Now, you *may* be wondering: What are my **favourite websites**?
 
 
 
-A meme that captures how I currently feel about my university studies is ![](https://storage.googleapis.com/proudcity/elgl/uploads/2020/04/Stressed-Meme.jpg)
+A meme that captures how I currently feel about my university studies is ![](https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTZlYTVrb25yeHF5aWgwZzdyMGJ2NXY5ZTdzbjQ1OXowNTRjbHBweCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/jwxy5MXUWDKlUtQatg/200w.gif)
 
 
