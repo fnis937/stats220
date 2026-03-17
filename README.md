@@ -11,7 +11,8 @@
     </ul>
 
 
-`Now, you *may* be wondering: What are my **favourite websites**?`\n
+`Now, you *may* be wondering: What are my **favourite websites**?`
+
 This is a website called pinterest, that I like using to look at cool pictures: [Pinterest](https://nz.pinterest.com/)
 
 
