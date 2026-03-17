@@ -13,7 +13,7 @@
 
 `Now, you *may* be wondering: What are my **favourite websites**?`
 
-This is a website called pinterest, that I like using to look at cool pictures: [Pinterest](https://nz.pinterest.com/)
+* This is a website called Little Alchemy, as a someone who did the traditional sciences in highschool, I loved going on this website and trying to create different elements when I was bored: [Little Alchemy 2](https://littlealchemy2.com)
 
 
 
