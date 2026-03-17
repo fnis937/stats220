@@ -13,7 +13,7 @@
 
 `Now, you *may* be wondering: What are my **favourite websites**?`
 
-* This is a website called Little Alchemy, as a someone who did the traditional sciences in highschool, I loved going on this website and trying to create different elements when I was bored: [Little Alchemy 2](https://littlealchemy2.com)
+* This is a website called Little Alchemy. As a someone who did the traditional sciences in highschool, I loved going on this website and trying to create different elements when I was bored: [Little Alchemy](https://littlealchemy.com)
 
 
 
