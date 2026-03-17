@@ -10,6 +10,9 @@
 </ol>
 
 Now, you *may* be wondering: Whats my **favourite website**?
+<ul>
+<li>This is a website called pinterest, that I like using to look at cool pictures: [Pinterest](https://nz.pinterest.com/)</li>
+</ul>
 
 A meme that captures how I currently feel about my university studies is ![](https://storage.googleapis.com/proudcity/elgl/uploads/2020/04/Stressed-Meme.jpg)
 
