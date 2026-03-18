@@ -6,9 +6,9 @@
 
 **_A little about me:_**
 
-  1.I am undertaking a degree in Science, majoring in information and technology management and computer science 
+  1. I am undertaking a degree in Science, majoring in information and technology management and computer science 
   
-  2.I am taking STATS 220 because I honestly had to take a stage 2 elective in order to graduate this year, and stumbled upon this course in the science programme schedule. This course appealed to me because of it's focus on data/ data science, and I'm so excited to be taking it!
+  2. I am taking STATS 220 because I honestly had to take a stage 2 elective in order to graduate this year, and stumbled upon this course in the science programme schedule. This course appealed to me because of it's focus on data/ data science, and I'm so excited to be taking it!
   
   3. I am interested in learning about learning how to program in R for data analysis and visualisation, as well as learning to develop creativity with data and technology.
     
