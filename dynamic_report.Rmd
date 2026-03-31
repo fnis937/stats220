@@ -1,0 +1,111 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #212922;
+  max-width: 860px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #5a2328;
+  border-bottom: 2px solid #5a2328;
+  padding-bottom: 6px;
+}
+
+h3 {
+  color: #EFA9AE;
+  border-bottom: 2px solid #EFA9AE;
+  padding-bottom: 6px;
+}
+
+
+p {
+  line-height: 1.7;
+}
+```
+
+## Auckland CBD Street Fashion: What Are People Wearing?
+
+This report analyses observational data collected in Auckland's CBD over several days in March 2026. Each entry represents one outfit observed in public, logging the clothing style, dominant colour, time of day, and weather conditions at the time of observation. 
+
+
+```{r}
+library(tidyverse)
+
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSakYuyhZ17dNmL4jyuVbffwvY1yp9fR7vRkiQS3lP4iPUNYzizzLM1Z5skusPxfBDS5fOwFGJKISa5/pub?gid=1774463375&single=true&output=csv")
+
+latest_data <- logged_data %>%
+  rename(temperature = 2,
+         raining = 3,
+         main_colour = 4,
+         style = 5,
+         time = 6,
+         day = 7)
+
+```
+```{r}
+
+#Summary value 1: Total number of observations 
+total <- nrow(latest_data)
+
+#Summary value 2: Mean observed temperature 
+mean_temp <- round(sum(latest_data$temperature) / length(latest_data$temperature), 1)
+
+
+# Minimum and maximum temperature observed
+temp_min <- min(latest_data$temperature)
+temp_max <- max(latest_data$temperature)
+```
+
+### About the data
+
+A total of `r total` outfits were logged across my obeservation period. Furthermore, temperatures at the time of observation ranged from `r temp_min` degrees celcius to `r temp_max` degrees celcius, with an average of `r mean_temp` degrees celcius. This is nothing out of the ordinary for an autumn day in Auckland.
+
+
+### What styles are people wearing?
+
+The chart below shows the breakdown of clothing styles observed, colour coded by the time of day each outfit was logged.
+
+```{r fig.width=10, fig.height=6}
+ggplot(latest_data, aes(x = style, fill = time)) +
+  geom_bar() +
+  labs(
+    title = "Outfit Styles Observed in Auckland CBD",
+    subtitle = "Observational log, March 2026",
+    x = "Clothing Style",
+    y = "Number of Observations",
+    fill = "Time of Day"
+  )
+```
+
+### What colours are most common?
+
+The chart below shows the frequency of each dominant outfit colour observed across all `r total` entries.
+
+```{r fig.width = 10, fig.height = 6}
+ggplot(latest_data, aes(x = main_colour)) +
+  geom_bar(fill = "pink") +
+  labs(
+    title = "Dominant Outfit Colours Observed in Auckland CBD",
+    subtitle = "Observational log, March 2026",
+    x = "Dominant Colour",
+    y = "Number of Observations"
+  )
+```
+
+
