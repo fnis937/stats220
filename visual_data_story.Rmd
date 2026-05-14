@@ -1,0 +1,109 @@
+---
+title: "Auckland CBD Street Fashion: A Visual Data Story"
+output: html_document
+---
+
+```{=html}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+```
+
+```{js}
+$(function() {
+  $(".level2").css('visibility', 'hidden');
+  $(".level2").first().css('visibility', 'visible');
+  $(".container-fluid").height($(".container-fluid").height() + 300);
+  $(window).on('scroll', function() {
+    $('h2').each(function() {
+      var h2Top = $(this).offset().top - $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (h2Top >= 0 && h2Top <= windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'visible');
+      } else if (h2Top > windowHeight / 2) {
+        $(this).parent('div').css('visibility', 'hidden');
+      }
+    });
+  });
+})
+```
+
+```{css, echo= FALSE}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #004385;
+  max-width: 860px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #276ab3;
+  border-bottom: 2px solid #276ab3;
+  padding-bottom: 6px;
+}
+
+h3 {
+  color: #d4c2fc;
+  border-bottom: 2px solid #d4c2fc;
+  padding-bottom: 6px;
+}
+
+
+p {
+  line-height: 1.7;
+}
+
+.figcaption {display: none}
+```
+
+## About This Project
+
+What does Auckland really wear? This data story explores street fashion observations collected in Auckland's CBD, recording outfit colours, clothing styles, temperature, and weather conditions across multiple weeks.
+
+Each observation represents one outfit spotted in a public space. No photographs were taken, and only general style choices were noted, which ensures the data remains completely anonymous. Over 43 were logged between **mid-March** and **mid-May**, spanning mornings, afternoons, and evenings on both weekdays and weekends.
+
+
+## What Colours Dominate Each Clothing Style?
+
+Do certain styles stick to certain colours? This chart breaks down outfit colour observations across four clothing styles: Smart Casual, Formal, Casual, and Streetwear.
+
+![Faceted bar chart with six panels, one per colour group: Black, Bold Colour, Grey, Multi/Pattern, Navy, and White. Each panel shows horizontal bars for the clothing styles observed in that colour. Smart Casual dominates the Black and Navy panels with the longest bars. Bold Colour and Multi/Pattern show smaller counts spread across Casual and Streetwear. White shows very few observations overall](plot1.png)
+
+This gives us a glimpse into just how common Navy is in Auckland CBD outfits. Smart Casual outfits in navy are the single most common combination in the dataset, followed by Formal in navy. Black is also strongly represented across Smart Casual, Casual, and Formal styles. Bold colours and patterns are rare, appearing mainly in Casual and Streetwear, suggesting this sample of data gives us a taste into how Auckland's CBD leans toward a restrained, professional palette.
+
+## What Temperature Were People Dressed For?
+
+Does clothing style reflect the temperature outside? This chart shows the spread of temperatures at the time each style was observed, with individual data points shown as dots.
+
+![Boxplot with four horizontal boxes for Smart Casual, Casual, Streetwear, and Formal. Individual observation points are shown as jittered dots. Smart Casual shows the widest temperature range, spanning roughly 13 to 23 degrees, with points clustered toward the warmer end. Casual also spans a wide range. Streetwear observations cluster between 14 and 18 degrees. Formal shows a wide spread with one outlier near 22 degrees](plot2.png)
+
+Smart Casual has the widest temperature range of any style, appearing across both cool and warm days. This tells us it is a versatile, year-round clothing style many people default to. Casual follows a similar pattern. Streetwear observations are more tightly clustered in the cool to mild range. Formal wear appears at a range of temperatures but has fewer observations overall, making its distribution harder to interpret with confidence. One obervation I made is that the elements of an outfit that would allow it to classify as Formal (such as blazers or trench coats) would be worn more in cooler weather, which could explain why so many more formal outfits were observed between 13 degrees and 15 degrees.
+
+## What Colours Do People Wear at Different Times of Day?
+
+Does the colour palette of Auckland's streets shift as the day progresses? This chart shows outfit colour frequency across morning, afternoon, and evening.
+
+![Faceted bar chart with three panels: Morning (6am - 12pm), Afternoon (12pm - 5pm), and Evening (5pm - 9pm). Each panel shows horizontal bars coloured to match the outfit colour they represent. In the morning, Navy and Black are the two most common colours with counts around 6-7. In the afternoon, Navy leads followed by Grey and Bold Colour. In the evening, Black dominates with a count near 7, followed by Bold Colour and Navy](plot3.png)
+
+The morning and afternoon panels are dominated by Navy and Black, consistent with professional and commuter dress. The afternoon introduces more Grey into the mix, possibly reflecting a broader range of people in the CBD during lunch hours. The evening panel is compratively diverse, and while Black overtakes Navy to become the dominant colour, the Bold Colour category rises noticeably. This suggests people dress more expressively for evening outings, and have more fun with styling their outfit.
+
+
+## Does Style Change Between Morning, Afternoon and Evening?
+
+By using `lubridate` to extract AM and PM directly from observation timestamps, this chart asks whether clothing style choices shift meaningfully throughout the day.
+
+![Faceted bar chart with three panels: Afternoon (PM) in pink, Evening (PM) in teal, and Morning (AM) in dark navy. The afternoon panel shows only Casual and Smart Casual, each with 5 observations. The evening panel shows Casual as the most common style at nearly 7, followed by Smart Casual and Streetwear. The morning panel is dominated by Smart Casual at nearly 9 observations, with Formal next at 5](plot4.png)
+
+The morning panel tells a clear story. Smart Casual dominates, consistent with a professional CBD crowd starting their workday. The evening panel shifts toward Casual as the most common style, with more variety overall including Streetwear. The afternoon has the fewest observations and is split evenly between Casual and Smart Casual. Notably, Activewear does not appear in this dataset, which may reflect the specific locations and times that observations were made.
+
+## The Story in Summary
+
+Auckland's CBD street fashion is defined by understated consistency: navy and black outfits, smart yet casual styles, and a wardrobe that barely flinches at the weather. Temperature nudges style choices only slightly at the margins. Time of day shapes the balance between Smart Casual and Casual. The data suggests Auckland's CBD dresses professionally during the day, with people letting loose towards the evening.
+
+*Data collected as part of STATS 220, University of Auckland, 2025.*
